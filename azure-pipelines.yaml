@@ -1,0 +1,56 @@
+# Update the manual trigger to run the pipeline for PR in develop, staging and main branches
+trigger: none
+pr: none
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  # 1. Install Node 22
+  - task: NodeTool@0
+    inputs:
+      versionSource: 'spec'
+      versionSpec: '22.x'
+    displayName: 'Use Node.js 22'
+
+  # 2. Enable pnpm via corepack
+  - script: |
+      corepack enable
+      corepack prepare pnpm@latest --activate
+    displayName: 'Enable pnpm'
+
+  # 3. Install dependencies
+  - script: pnpm install --frozen-lockfile
+    displayName: 'Install dependencies'
+
+  # 4. Lint and format check
+  - script: pnpm run lint:all
+    displayName: 'Lint & Prettier Check'
+
+  # 5. Tests with coverage
+  - script: pnpm run test:ci
+    displayName: 'Run Test Cases with Coverage'
+
+  # 6. Publish test results
+  - task: PublishTestResults@2
+    inputs:
+      testRunner: 'JUnit'
+      testResultsFiles: '$(System.DefaultWorkingDirectory)/coverage/test-report/junit-report.xml'
+      failTaskOnFailedTests: true
+    displayName: 'Publish Test Results'
+
+  # 7. Publish code coverage (optional)
+  # - task: PublishCodeCoverageResults@2
+  #   inputs:
+  #     codeCoverageTool: 'Cobertura'
+  #     summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml'
+  #     failIfCoverageEmpty: true
+  #   displayName: 'Publish Code Coverage Results'
+
+  # 8. Build
+  - script: pnpm run build:production
+    displayName: 'Run Build'
+
+  # 10. Lighthouse performance audit (optional)
+  # - script: pnpm run lighthouse
+  #   displayName: 'Run Lighthouse CI'

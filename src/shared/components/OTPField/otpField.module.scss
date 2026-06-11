@@ -1,0 +1,20 @@
+@use '@scssVariables' as *;
+
+.otp__container {
+  .otp-field {
+    input {
+      width: 40px;
+      height: 40px;
+      border-width: 1px;
+      border-radius: $input-border-radius;
+      border-color: $input-border-color;
+      &:focus,
+      &:hover {
+        border-color: $input-border-color-hover;
+      }
+      &:focus {
+        box-shadow: $input-border-box-shadow;
+      }
+    }
+  }
+}

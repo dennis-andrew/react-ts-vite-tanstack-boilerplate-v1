@@ -1,0 +1,130 @@
+@use '@scssVariables' as *;
+
+/* Input Field */
+.ant-input {
+  border-radius: $input-border-radius;
+  border-color: $input-border-color;
+  &:focus,
+  &:hover {
+    border-color: $input-border-color-hover;
+  }
+  &:focus {
+    box-shadow: $input-border-box-shadow;
+  }
+}
+
+/* Button */
+
+.ant-btn {
+  /* Primary button */
+  background-color: $button-default-bg-color;
+  color: $button-default-text-color;
+  border-color: $button-default-border-color;
+  border-radius: $button-default-border-radius;
+  &.ant-btn-primary {
+    background-color: $button-primary-bg-color;
+    color: $button-primary-text-color;
+    border-color: $button-primary-border-color;
+    border-radius: $button-primary-border-radius;
+  }
+
+  &::before {
+    opacity: 0;
+  }
+}
+
+/* Checkbox */
+
+.ant-checkbox-wrapper {
+  .ant-checkbox-inner {
+    border-color: $checkbox-hover-border-color;
+    width: 22px;
+    height: 22px;
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+  .ant-checkbox-checked {
+    .ant-checkbox-inner {
+      background-color: $checkbox-bg-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      width: 22px;
+      height: 22px;
+      padding: 10px;
+      border-color: $checkbox-hover-border-color;
+      &:hover {
+        border-radius: 8px;
+        border: 0px;
+      }
+    }
+    &::after {
+      border-color: $checkbox-hover-border-color;
+      border-radius: 4px;
+    }
+  }
+}
+
+/* Radio Group */
+.ant-radio {
+  .ant-radio-inner {
+    border-color: $radio-border-color;
+  }
+
+  &.ant-radio-checked {
+    .ant-radio-inner {
+      border-color: $radio-checked-border-color;
+      &::after {
+        background-color: $radio-checked-bg-color;
+      }
+    }
+  }
+}
+
+/* Radio solid */
+.ant-radio-group.ant-radio-group-solid {
+  .ant-radio-button-wrapper {
+    &:hover {
+      color: $checkbox-hover-text-color;
+    }
+    &.ant-radio-button-wrapper-checked {
+      background-color: $radio-checked-bg-color;
+      border-color: $radio-checked-border-color;
+      color: $checkbox-text-color;
+
+      &::before {
+        background-color: $radio-checked-bg-color;
+      }
+    }
+  }
+}
+
+/* Select */
+.ant-select {
+  width: 100%;
+  &:focus-visible {
+    box-shadow: $select-focus-box-shadow;
+  }
+  .ant-select-selector {
+    border-color: $select-border-color;
+    &:hover {
+      border-color: $select-hover-border-color;
+    }
+  }
+
+  &.ant-select-open {
+    .ant-select-selector {
+      box-shadow: $select-focus-box-shadow;
+    }
+  }
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-radius: 4px;
+}
+
+.ant-switch-checked {
+  background-color: $primary-color;
+}

@@ -1,0 +1,9 @@
+.app-components {
+  h1 {
+    text-align: center;
+  }
+  padding: 2.5rem;
+  &__title {
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,5 @@
+@use '@scssVariables' as *;
+
+.input__error {
+  color: $danger-color;
+}

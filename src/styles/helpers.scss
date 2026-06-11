@@ -1,0 +1,175 @@
+@use '@scssVariables' as *;
+
+/* Helpers CSS */
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.float-right {
+  float: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.text-light-grey {
+  color: $light-grey;
+}
+
+.text-dark-grey {
+  color: $dark-grey;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.bb-5 {
+  border-bottom: ($spacer-y * 1.25) solid $primary-color;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-none {
+  float: none;
+}
+
+.primary-black {
+  color: $primary-black;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* Padding */
+
+.p-0 {
+  padding: 0;
+}
+
+.pr-0 {
+  padding-right: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+/* Margins */
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mt-1 {
+  margin-top: ($spacer-y * 0.25);
+}
+
+.mt-2 {
+  margin-top: ($spacer-y * 0.5);
+}
+
+.mt-3 {
+  margin-top: ($spacer-y * 0.75);
+}
+
+.mt-4 {
+  margin-top: ($spacer-y * 1);
+}
+
+.mt-5 {
+  margin-top: ($spacer-y * 1.25);
+}
+
+.mb-2 {
+  margin-bottom: ($spacer-y * 0.5);
+}
+
+.mb-3 {
+  margin-bottom: ($spacer-y * 0.75);
+}
+
+.mb-4 {
+  margin-bottom: ($spacer-y * 1);
+}
+
+.mb-5 {
+  margin-bottom: ($spacer-y * 1.25);
+}
+
+.ml-2 {
+  margin-left: ($spacer-x * 0.5);
+}
+
+.ml-3 {
+  margin-left: ($spacer-x * 0.75);
+}
+
+.ml-4 {
+  margin-left: ($spacer-x * 1);
+}
+
+.ml-5 {
+  margin-left: ($spacer-x * 1.25);
+}
+
+.mr-1 {
+  margin-right: ($spacer-x * 0.25);
+}
+
+.mr-2 {
+  margin-right: ($spacer-x * 0.5);
+}
+
+.mr-3 {
+  margin-right: ($spacer-x * 0.75);
+}
+
+.mr-4 {
+  margin-right: ($spacer-x * 1);
+}
+
+.mr-5 {
+  margin-right: ($spacer-x * 1.25);
+}

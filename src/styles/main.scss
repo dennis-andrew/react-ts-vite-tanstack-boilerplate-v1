@@ -1,0 +1,110 @@
+@use '@scssVariables' as *;
+@use '@scssHelpers' as *;
+@use '@scssAntOverrides' as antOverrides;
+
+/* General component styles */
+body {
+  background-color: #ffffff;
+  color: $primary-black;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+button,
+input {
+  font-family: 'Roboto', sans-serif;
+}
+
+.avatar-bg-color--1 {
+  background-color: #ef6c0033;
+  color: #ef6c00;
+}
+
+.avatar-bg-color--2 {
+  background-color: #c2175a33;
+  color: #c2175a;
+}
+
+.avatar-bg-color--3 {
+  background-color: #be360933;
+  color: #be3609;
+}
+
+.avatar-bg-color--4 {
+  background-color: #7c58c033;
+  color: #7c58c0;
+}
+
+.avatar-bg-color--5 {
+  background-color: #ab47bb33;
+  color: #ab47bb;
+}
+
+.avatar-bg-color--6 {
+  background-color: #01897b33;
+  color: #01897b;
+}
+
+.avatar-bg-color--7 {
+  background-color: #00579b33;
+  color: #00579b;
+}
+
+.avatar-bg-color--8 {
+  background-color: #bf350d33;
+  color: #bf350d;
+}
+
+.avatar-bg-color--9 {
+  background-color: #5b6bc033;
+  color: #5b6bc0;
+}
+
+.avatar-bg-color--10 {
+  background-color: #00579a33;
+  color: #00579a;
+}
+
+.avatar-bg-color--11 {
+  background-color: #33691c33;
+  color: #33691c;
+}
+
+.avatar-bg-color--12 {
+  background-color: #7e57c233;
+  color: #7e57c2;
+}
+
+.avatar-bg-color--13 {
+  background-color: #77909c33;
+  color: #77909c;
+}
+
+.avatar-bg-color--14 {
+  background-color: #455a6433;
+  color: #455a64;
+}
+
+.avatar-bg-color--15 {
+  background-color: #669f3733;
+  color: #669f37;
+}
+
+.avatar-bg-color--16 {
+  background-color: #eb407a33;
+  color: #eb407a;
+}
+
+.avatar-bg-color--17 {
+  background-color: #bf360d33;
+  color: #bf360d;
+}
+
+.avatar-bg-color--18 {
+  background-color: #0097a733;
+  color: #0097a7;
+}

@@ -1,0 +1,62 @@
+{
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/exhaustive-deps": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/no-danger": "warn",
+    "react/no-direct-mutation-state": "error",
+    "react/no-deprecated": "warn",
+    "react/no-unknown-property": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-key": "error",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-non-null-assertion": "warn",
+    "no-console": "warn",
+    "no-debugger": "error",
+    "no-duplicate-imports": "warn",
+    "no-unreachable": "error",
+    "no-unused-imports": "warn",
+    "eqeqeq": "error",
+    "no-eval": "error",
+    "no-shadow": "warn",
+    "no-promise-executor-return": "error",
+    "require-await": "warn",
+    "no-duplicate-exports": "error",
+    "no-var": "error",
+    "prefer-const": "warn",
+    "object-shorthand": "warn",
+    "no-useless-return": "warn",
+    "no-implicit-coercion": "warn",
+    "prefer-template": "warn",
+    "no-unsafe-optional-chaining": "error",
+    "no-useless-catch": "warn",
+    "default-param-last": "warn",
+    "no-return-await": "warn"
+  },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "ignorePatterns": [
+    "dist",
+    "build",
+    "coverage",
+    "node_modules",
+    "src/routeTree.gen.ts",
+    "*.config.js",
+    "*.config.ts",
+    "**/*.test.tsx",
+    "**/*.test.ts",
+    "setupTests.ts"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.test.ts", "**/*.test.tsx", "setupTests.ts"],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
+}
