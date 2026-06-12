@@ -1,6 +1,7 @@
 import { Suspense, useContext, useEffect } from 'react'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { createRouter, RouterProvider } from '@tanstack/react-router'
+import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 import { queryClient } from 'src/config/queryConfig'
 import { AuthContext } from 'src/context/AuthContext'
 import { routeTree } from 'src/routeTree.gen'
@@ -39,6 +40,13 @@ const AppRouter = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} context={{ auth, queryClient }} />
+        {import.meta.env.DEV && (
+          <TanStackRouterDevtools
+            router={router}
+            initialIsOpen={false}
+            position="bottom-left"
+          />
+        )}
       </QueryClientProvider>
     </Suspense>
   )

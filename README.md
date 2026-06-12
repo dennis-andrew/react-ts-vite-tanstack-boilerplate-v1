@@ -819,6 +819,26 @@ await router.invalidate()
 
 The boilerplate defines default pending, error, and not-found fallbacks in `src/routes/routeFallbacks.tsx` and wires them in `src/routes/index.tsx`. Override these at the route level only when a feature needs a more specific empty, error, or loading state.
 
+#### TanStack Router Devtools
+
+TanStack Router Devtools are enabled only during local development through `import.meta.env.DEV`. They are rendered in `src/routes/index.tsx` beside `RouterProvider` and start closed by default.
+
+Run the app with:
+
+```bash
+pnpm dev
+```
+
+Then open the small TanStack Router button in the bottom-left corner of the browser. Use it to inspect:
+
+- The current route match stack
+- Route params and validated search params
+- Router state and location changes
+- Loader, pending, error, and not-found route states
+- Which routes are preloading when links use intent preloading
+
+Keep devtools development-only. Do not use `TanStackRouterDevtoolsInProd` unless a project has a specific production debugging requirement and the security/privacy impact is reviewed.
+
 Keep router context generic and small. The current router context receives `AuthContext` and the shared React Query `queryClient` through `RouterProvider`, so route guards and loaders can read pre-render dependencies without importing React context directly. Add new router context values only when they are needed before a route loads, and invalidate the router when context values that guards depend on change.
 
 Use TanStack Router primitives for navigation:
