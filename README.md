@@ -124,6 +124,8 @@ This project uses **React Context API** for global state management:
   - `src/routes/routeConstants/appRoutes.ts` - Frontend route path constants
   - `src/routes/routeConstants/apiRoutes.ts` - Backend API endpoints
   - Route-level guards for public and authenticated routes
+  - See [`docs/TANSTACK_ROUTER_GUIDE.md`](docs/TANSTACK_ROUTER_GUIDE.md) for the
+    repository-specific implementation, migration, and feature guide
 
 ## Project Directory Structure
 
